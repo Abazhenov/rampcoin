@@ -18,10 +18,137 @@
   <meta name="twitter:description" content="Live on Solana mainnet. Mint your $RAMP now.">
   <meta name="twitter:image" content="https://abazhenov.github.io/rampcoin/og-image.png">
 
-  <!-- Rickroll Redirect -->
-  <meta http-equiv="refresh" content="0;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #21325b;
+      font-family: -apple-system, 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      color: #fff;
+    }
+    .header {
+      background: #1c1e26;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #2b3a5a;
+    }
+    .header svg { width: 24px; height: 24px; }
+    .header span { font-size: 15px; font-weight: 600; color: #fff; }
+    .header .sub { color: #8c98a4; font-size: 12px; font-weight: 400; margin-left: 4px; }
+    .nav {
+      background: #1c1e26;
+      padding: 0 20px;
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+      border-bottom: 1px solid #2b3a5a;
+    }
+    .nav a {
+      color: #8c98a4;
+      text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .nav a.active { color: #fff; border-bottom-color: #3498db; }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: #1c1e26;
+      border: 1px solid #2b3a5a;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .token-icon {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, #f7c948, #e0a800);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 18px; color: #1c1e26;
+    }
+    .token-name { font-size: 20px; font-weight: 600; }
+    .token-ticker { color: #8c98a4; font-size: 14px; }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-top: 1px solid #2b3a5a;
+      font-size: 14px;
+    }
+    .row .label { color: #8c98a4; }
+    .row .value { color: #fff; font-weight: 500; }
+    .row .value.green { color: #00c853; }
+    .loading-bar {
+      margin-top: 24px;
+      background: #2b3a5a;
+      border-radius: 6px;
+      height: 6px;
+      overflow: hidden;
+    }
+    .loading-bar .fill {
+      height: 100%;
+      width: 30%;
+      background: linear-gradient(90deg, #3498db, #2ecc71);
+      border-radius: 6px;
+      animation: load 1.5s ease-in-out infinite;
+    }
+    @keyframes load {
+      0% { width: 10%; margin-left: 0; }
+      50% { width: 40%; margin-left: 30%; }
+      100% { width: 10%; margin-left: 90%; }
+    }
+    .status {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #8c98a4;
+    }
+    .status span { animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }, 3000);
+  </script>
 </head>
 <body>
-  <p>Redirecting to mint...</p>
+  <div class="header">
+    <svg viewBox="0 0 24 24" fill="none"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" fill="#3498db" opacity="0.8"/><polygon points="12,6 18,9.5 18,14.5 12,18 6,14.5 6,9.5" fill="#fff" opacity="0.3"/></svg>
+    <span>Etherscan<span class="sub">Blockchain Explorer</span></span>
+  </div>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a class="active" href="#">Tokens</a>
+    <a href="#">NFTs</a>
+    <a href="#">Resources</a>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div class="token-icon">R</div>
+        <div>
+          <div class="token-name">Ramp Coin</div>
+          <div class="token-ticker">$RAMP</div>
+        </div>
+      </div>
+      <div class="row"><span class="label">Contract</span><span class="value">0x7a3b...f92e</span></div>
+      <div class="row"><span class="label">Network</span><span class="value">Solana Mainnet</span></div>
+      <div class="row"><span class="label">Total Supply</span><span class="value">1,000,000,000</span></div>
+      <div class="row"><span class="label">Holders</span><span class="value green">142,837</span></div>
+      <div class="row"><span class="label">Mint Price</span><span class="value green">FREE</span></div>
+      <div class="loading-bar"><div class="fill"></div></div>
+      <div class="status">Loading transaction data<span>...</span></div>
+    </div>
+  </div>
 </body>
 </html>
